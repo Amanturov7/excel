@@ -27,7 +27,7 @@ public class ExcelReaderController {
         this.excelDataService = excelDataService;
     }
 
-    @PostMapping("/rest/read-excel")
+    @PostMapping("/rest/parse/pools")
     public ResponseEntity<String> readExcel(@RequestParam("file") MultipartFile file) {
         try {
             List<List<List<String>>> allExcelData = readAllExcelData(file);
